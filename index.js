@@ -2,31 +2,30 @@
 function calculate() {
   var height = document.getElementById('height').value;
   var weight = document.getElementById('weight').value;
-  var input =  document.getElementById('input');
+  var input =  document.getElementById('input').value;
   var result = document.getElementById('result').value;
   var correct = document.getElementById('correct'); 
-  var age =  document.getElementById('age').value; 
 var bmi = weight/(height/100*height/100);
   var bmio = (bmi.toFixed(2));
  if (bmio<18.6) {
    document.getElementById('result').innerHTML = bmio;
-   document.getElementById('comment').innerHTML = 'Underweight';
+   document.getElementById('comment').innerHTML = 'You are Underweight';
  }
  else if (18.5<=bmio<=24.9) {
   document.getElementById('result').innerHTML = bmio;
-  document.getElementById('comment').innerHTML = 'Healthy';
+  document.getElementById('comment').innerHTML = 'You are Healthy';
 }
 else if (25<=bmio<=29.9) {
   document.getElementById('result').innerHTML = bmio;
-  document.getElementById('comment').innerHTML = 'Overweight';
+  document.getElementById('comment').innerHTML = 'You are Overweight';
 }
 else if (30<=bmio<=34.9) {
   document.getElementById('result').innerHTML = bmio;
-  document.getElementById('comment').innerHTML = 'Obese';
+  document.getElementById('comment').innerHTML = 'You are Obese';
 }
 else if (35<=bmio) {
   document.getElementById('result').innerHTML = bmio;
-  document.getElementById('comment').innerHTML = 'Extremely obese';
+  document.getElementById('comment').innerHTML = 'You are Extremely obese';
 }
 var male=document.getElementById("male");
 var female=document.getElementById("female");
@@ -46,7 +45,7 @@ document.getElementById('comment').innerHTML = '';
 else{
   document.getElementById('weight_error').innerText = '';
 }
-if (age == '' || isNaN(age) || (age <=0) ) {
+if (input == '' || isNaN(input) || (input<=0)) {
   document.getElementById('age_error').innerText = 'please provide your age.';
   document.getElementById('result').innerHTML = '00.00';
   document.getElementById('comment').innerHTML = '';

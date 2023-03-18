@@ -3,7 +3,6 @@
 #container{
     width: 80%;
     color: white;
-    height: 70%;
     padding: 20px;
     position: absolute;
     transform: translate(5%,0%);
@@ -12,6 +11,7 @@
     border-radius: 20px;
     filter: drop-shadow(3px 3px 6px rgb(126, 126, 159));
     text-align: center;
+    padding-bottom: 70px;
     
 }
 h1{
