@@ -50,10 +50,11 @@ console.log('result')
 function selcect() {
 var swap = document.getElementById('img');
  swap.style.display = 'block';
+ swap.src="images/Untitled-2.png";
 }
 function select() {
   var swap = document.getElementById('img');
    swap.style.display = 'block';
-   swap.src="Untitled-1.png";
+   swap.src="images/Untitled-1.png";
   }
   
