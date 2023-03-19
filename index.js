@@ -2,7 +2,6 @@
 function calculate() {
   var height = document.getElementById('height').value;
   var weight = document.getElementById('weight').value;
-  var input =  document.getElementById('input').value;
   var result = document.getElementById('result').value;
   var correct = document.getElementById('correct'); 
 var bmi = weight/(height/100*height/100);
@@ -27,31 +26,34 @@ else if (35<=bmio) {
   document.getElementById('result').innerHTML = bmio;
   document.getElementById('comment').innerHTML = 'You are Extremely obese';
 }
-var male=document.getElementById("male");
-var female=document.getElementById("female");
-if(male.checked==false && female.checked==false){
-   document.getElementById('gender_error').innerHTML = 'please select gender'
-   document.getElementById('result').innerHTML = '00.00';
-   document.getElementById('comment').innerHTML = '';
-}
-else{
-  document.getElementById('gender_error').innerHTML = '' 
-}
-if (weight == '' || (weight <=0) || height == '' || (height <=0)) {
-document.getElementById('weight_error').innerText = 'please fill these fields correctly.';
+
+if (weight == '' || (weight <=0)) {
+  alert("provide your weight.");
 document.getElementById('result').innerHTML = '00.00';
 document.getElementById('comment').innerHTML = '';
 }
 else{
   document.getElementById('weight_error').innerText = '';
 }
-if (input == '' || isNaN(input) || (input<=0)) {
-  document.getElementById('age_error').innerText = 'please provide your age.';
+if (height == '' || (height <=0)) {
+  alert("provide your height.");
   document.getElementById('result').innerHTML = '00.00';
   document.getElementById('comment').innerHTML = '';
   }
   else{
-    document.getElementById('age_error').innerText = '';
+    document.getElementById('weight_error').innerText = '';
   }
+
 console.log('result')
+
 }
+function selcect() {
+var swap = document.getElementById('img');
+ swap.style.display = 'block';
+}
+function select() {
+  var swap = document.getElementById('img');
+   swap.style.display = 'block';
+   swap.src="Untitled-1.png";
+  }
+  
