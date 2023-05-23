@@ -6,23 +6,24 @@ function calculate() {
   var correct = document.getElementById('correct'); 
 var bmi = weight/(height/100*height/100);
   var bmio = (bmi.toFixed(2));
+  console.log(bmio)
  if (bmio<18.6) {
    document.getElementById('result').innerHTML = bmio;
    document.getElementById('comment').innerHTML = 'You are Underweight';
  }
- else if (18.5<=bmio<=24.9) {
+ else if (bmio<=18.5 || bmio<=24.9) {
   document.getElementById('result').innerHTML = bmio;
   document.getElementById('comment').innerHTML = 'You are Healthy';
 }
-else if (25<=bmio<=29.9) {
+else if (bmio<=25 || bmio<=29.9) {
   document.getElementById('result').innerHTML = bmio;
   document.getElementById('comment').innerHTML = 'You are Overweight';
 }
-else if (30<=bmio<=34.9) {
+else if (bmio<=30 || bmio<=34.5) {
   document.getElementById('result').innerHTML = bmio;
   document.getElementById('comment').innerHTML = 'You are Obese';
 }
-else if (35<=bmio) {
+else if (bmio>35) {
   document.getElementById('result').innerHTML = bmio;
   document.getElementById('comment').innerHTML = 'You are Extremely obese';
 }
@@ -43,8 +44,6 @@ if (height == '' || (height <=0)) {
   else{
     document.getElementById('weight_error').innerText = '';
   }
-
-console.log('result')
 
 }
 function selcect() {
